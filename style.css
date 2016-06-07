@@ -80,6 +80,7 @@ li{
 
 .fa-external-link{
     text-align: right;
+    font-size: 0.7em;
 }
 
 
@@ -150,7 +151,7 @@ li{
     ul{
         display: flex;
         flex-wrap: wrap;
-        /* padding-bottom: 40px; */
+        padding-left: 0;
     }
     .articles{
         background-color: #E0DDDD;
@@ -160,11 +161,10 @@ li{
    /*  display: inline-block; */
         margin: 20px;
         padding: 20px;
-        width: calc((100% - 208px)/2);  /* 20px * 4 margin + 20px *4 padding+ 4px border*/
+        width: calc((100% - 164px)/2);  /* (20px * 4) margin + (20px *4) padding+ (1px * 4) border*/
         border-radius: 4px;
         box-shadow: 1px 1px 8px 0px #9D9591;
         background-color: white;
-        /*  border: 1px solid gray; */
     }
     input{
         margin-right: 15px;
@@ -192,6 +192,7 @@ li{
     ul{
         display: flex;
         flex-wrap: wrap;
+        padding-left: 0;
     }
     .articles{
         background-color: #E0DDDD;
@@ -200,7 +201,7 @@ li{
     li{
         margin: 20px;
         padding: 20px;
-        width: calc((100% - 208px)/2);  /* 20px * 4 margin + 20px *4 padding+ 4px border*/
+        width: calc((100% - 164px)/2);  /* 20px * 4 margin + 20px *4 padding+ 4px border*/
         border-radius: 4px;
         box-shadow: 1px 1px 8px 0px #9D9591;
         background-color: white;

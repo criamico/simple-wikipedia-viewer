@@ -23,14 +23,14 @@
            <form ng-submit="userQuery!=='' && getWikiArticles()">
             <h1>Search Wikipedia:  <input type = "text" ng-model = "userQuery">
             <i class="fa fa-globe" aria-hidden="true"></i>
-            <select name="lang" ng-model="language">
+            <select name="lang" ng-model="language" >
                 <option value="en" selected>English</option>
                 <option value="it">Italiano</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
             </select>
            </form>
-           <p class="random-art"><a href="https://en.wikipedia.org/wiki/Special:Random">Or, visit a random wikipedia article </a></p>
+           <p class="random-art"><a href={{changeLang()}} >Or, visit a random wikipedia article <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
             <p class="author">Created by <a href="https://github.com/criamico">criamico</a> - 2016</p>
        </div> <!-- search-bar -->
 
