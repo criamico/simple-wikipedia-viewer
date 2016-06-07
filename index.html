@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wikipediaViewer">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Another wikipedia viewer</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" >
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body >
+
+    <!-- Container -->
+    <main ng-controller="viewerController">
+       <div class="container">
+
+       <div class="search-bar">
+           <form ng-submit="userQuery!=='' && getWikiArticles()">
+            <h1>Search Wikipedia:  <input type = "text" ng-model = "userQuery">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <select name="lang" ng-model="language">
+                <option value="en" selected>English</option>
+                <option value="it">Italiano</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+           </form>
+           <p class="random-art"><a href="https://en.wikipedia.org/wiki/Special:Random">Or, visit a random wikipedia article </a></p>
+            <p class="author">Created by <a href="https://github.com/criamico">criamico</a> - 2016</p>
+       </div> <!-- search-bar -->
+
+       <div class="articles" > <!-- ng-hide="userQuery==='' -->
+             <ul class="articles-list">
+                 <li class="article" ng-repeat="article in articlesList">
+                    <a class="url" href="{{article.url}}">
+                         <h2 class="title"> {{article.title}} <i class="fa fa-external-link" aria-hidden="true"></i></h2>
+                         <p class="snippet" ng-bind-html="article.content"> </p>
+                     </a>
+                 </li>
+             </ul>
+       </div>
+
+
+        </div><!-- container -->
+    </main>
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script> -->
+
+    <script src="app/viewerApp.js"></script>
+  </body>
+</html>
