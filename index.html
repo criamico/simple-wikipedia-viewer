@@ -20,8 +20,12 @@
        <div class="container">
 
        <div class="search-bar">
-           <form ng-submit="userQuery!=='' && getWikiArticles()">
-            <h1>Search Wikipedia:  <input type = "text" ng-model = "userQuery">
+           <form name= "search" ng-submit="userQuery!=='' && getWikiArticles()">
+            <h1>Search Wikipedia:  <input type = "text" ng-model = "userQuery"  list="autocomplete" ng-change="autoComplete()" ng-model-options="{debounce: 1000}" > </h1>
+            <datalist id="autocomplete" >
+                <option ng-repeat="val in autocompleteList track by $index" ng-selected="">{{val}}</option>
+            </datalist>
+
             <i class="fa fa-globe" aria-hidden="true"></i>
             <select name="lang" ng-model="language" >
                 <option value="en" selected>English</option>
