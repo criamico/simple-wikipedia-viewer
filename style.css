@@ -22,9 +22,9 @@ a>h2.title:hover{
 }
 
 h1{
-    font-size: 1.5em;
     color: white;
     font-weight: lighter;
+    display: inline-block;
 }
 
 h2{
@@ -63,6 +63,9 @@ input{
 }
 .fa-globe {
         vertical-align: middle;
+        font-size: 1.4em;
+        color: white;
+        display: inline-block;
 }
 
 select{
@@ -86,7 +89,7 @@ li{
 
 .author{
     color: white;
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-align: right;
     margin-right: 20px;
 }
@@ -122,6 +125,9 @@ li{
         border-bottom: 1px solid gray;
         padding: 20px 0;
     }
+    h1{
+        font-size: 1.4em;
+    }
 
     h2{
         font-size: 1.3em;
@@ -134,8 +140,11 @@ li{
     .container{
         max-width: 100%;
     }
-    h2{
+    h1{
         font-size: 1.4em;
+    }
+    h2{
+        font-size: 1.3em;
     }
     p{
         font-size: 1em;
@@ -175,8 +184,11 @@ li{
     .container{
         max-width: 80%;
     }
-     h2{
+    h1{
         font-size: 1.4em;
+    }
+     h2{
+        font-size: 1.3em;
     }
     p{
         font-size: 1em;
